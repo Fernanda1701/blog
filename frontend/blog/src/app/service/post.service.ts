@@ -6,6 +6,7 @@ import { Post } from '../model/Post';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PostService {
 
   constructor(private http: HttpClient) { }
@@ -17,4 +18,5 @@ export class PostService {
   postMensagem(post: Post) {
     return this.http.post('http://localhost:3000/posts', post)
   }
+
 }

@@ -1,15 +1,15 @@
 hr{
-border-color: white;
+  border-color: white;
 }
 
 .hr1{
-border-color: #F6CEF5;
+  border-color: #F6CEF5;
 }
 
 .info{
-background-image: url(https://cdn.pixabay.com/photo/2018/04/30/18/14/graph-paper-3363522_960_720.png);
-background-repeat: no-repeat;
-background-size: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2018/04/30/18/14/graph-paper-3363522_960_720.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .font{

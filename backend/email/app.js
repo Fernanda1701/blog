@@ -14,9 +14,7 @@ app.listen(3001, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send(
-    "<h1 style='text-align: center'>Contato Blog</h1>"
-  );
+  res.send("<h1 style='text-align: center'>Contato Blog</h1>");
 });
 
 app.post("/sendmail", (req, res) => {
@@ -29,11 +27,11 @@ app.post("/sendmail", (req, res) => {
 });
 
 async function sendMail(user, callback) {
-  // create reusable transporter object using the default SMTP transport
+
   let transporter = nodemailer.createTransport({
-    host: "smtp-mail.outlook.com",
+    host: "smtp-mail.outlook.com", //coloque o smtp do seu email
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false, // true se houver mais de uma porta
     auth: {
       user: details.email,
       pass: details.password
@@ -41,16 +39,13 @@ async function sendMail(user, callback) {
   });
 
   let mailOptions = {
-    from: "Usuario: " + user.email + "<"+details.email+">", // sender address
-    to: details.email, // list of receivers
-    subject: `Usuário ${user.name} (${user.email})`, // Subject line
+    from: "Usuario: " + user.email + "<"+details.email+">",
+    to: details.email,
+    subject: `Usuário ${user.name} (${user.email})`,
     html: `<h4>${user.name}, entrou em contato!</h4><p>${user.message}</p>`
   };
 
-  // send mail with defined transport object
   let info = await transporter.sendMail(mailOptions);
 
   callback(info);
 }
-
-// main().catch(console.error);

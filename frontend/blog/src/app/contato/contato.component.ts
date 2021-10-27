@@ -6,10 +6,12 @@ import { EmailService } from '../service/email.service';
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.css']
 })
+
 export class ContatoComponent implements OnInit {
   nomeRem : String = '';
   emailRem: String = '';
   mensagemRem: String = '';
+  isShown: boolean = false;
 
   constructor(private emailService: EmailService) { }
 
@@ -19,6 +21,7 @@ export class ContatoComponent implements OnInit {
   enviar() {
     console.log(this.nomeRem + " - "+ this.emailRem + " - "+ this.mensagemRem);
     this.emailService.sendEmail(this.nomeRem, this.emailRem, this.mensagemRem);
+    this.isShown = true;
   }
 
 }
