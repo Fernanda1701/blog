@@ -17,5 +17,4 @@ export class PostService {
   postMensagem(post: Post) {
     return this.http.post('http://localhost:3000/posts', post)
   }
-
 }
