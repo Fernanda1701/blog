@@ -78,7 +78,7 @@ Após tudo inicializado podemos cadastrar mensagens no feed, pesquisa-las por no
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [TypeScript](https://www.typescriptlang.org/)
-- Versionamento de código no [GitHub](https://github.com/)
+- Versionamento de código no [Git](https://git-scm.com/)
 
 
 ## 💻 IDE
